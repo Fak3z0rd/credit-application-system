@@ -3,9 +3,10 @@ package dio.me.credit.application.system.service.impl
 import dio.me.credit.application.system.entity.Customer
 import dio.me.credit.application.system.repository.ICustomerRepository
 import dio.me.credit.application.system.service.ICustomerService
-import org.springframework.stereotype.Repository
+import org.springframework.stereotype.Service
 import java.lang.RuntimeException
 
+@Service
 class CustomerService(
     private val customerRepository: ICustomerRepository
 ): ICustomerService {
