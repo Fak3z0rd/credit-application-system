@@ -21,7 +21,6 @@ import java.math.BigDecimal
 import java.time.LocalDate
 import java.util.*
 
-@ActiveProfiles("test")
 @ExtendWith(MockKExtension::class)
 class CreditServiceTest {
     @MockK
@@ -127,7 +126,7 @@ class CreditServiceTest {
         dayFirstInstallment: LocalDate = LocalDate.now().plusDays(3),
         numberOfInstallments: Int = 12,
         status: Status = Status.IN_PROGRESS,
-        customer: Customer = buildCustomer(),
+        customer: Customer,
         id: Long = 1L,
     ) = Credit(
         creditCode = creditCode,
