@@ -57,7 +57,7 @@ class CreditRepositoryTest {
     @Test
     fun `should find all credits by customerId`() {
         //given
-        val customerId: Long = 1L
+        val customerId: Long = 1
         //when
         val creditList: List<Credit> = creditRepository.findAllByCustomerId(customerId)
         //then
