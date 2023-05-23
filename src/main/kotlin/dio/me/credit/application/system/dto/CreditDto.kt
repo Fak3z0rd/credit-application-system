@@ -10,10 +10,10 @@ import java.math.BigDecimal
 import java.time.LocalDate
 
 data class CreditDto(
-    @field:NotNull val creditValue: BigDecimal,
+    @field:NotNull @field:Min(value = 1) val creditValue: BigDecimal,
     @field:Future val dayFirstInstallment: LocalDate,
     @field:Min(value = 1) @field:Max(value = 48) val numberOfInstallments: Int,
-    @field:NotNull val customerId: Long
+    @field:NotNull val customerId: Long,
 ) {
 
     fun toEntity(): Credit = Credit(
